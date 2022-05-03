@@ -1,10 +1,10 @@
-import { Request, Resposne } from "express";
+import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 class UserController {
-  static async find(red: Request, res: Response) {
+  static async find(req: Request, res: Response) {
     try {
       console.time("Find users");
       const users = await prisma.user.findMany();
