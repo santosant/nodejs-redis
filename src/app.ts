@@ -11,6 +11,7 @@ app.get("/users", UserController.find);
 app.get("/clear-cache", async (req, res) => {
   await redis.del("users:all");
 
+  console.log("Cache cleaned");
   res.json({
     ok: true,
   });
