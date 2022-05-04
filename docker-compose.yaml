@@ -21,4 +21,4 @@ services:
     expose:
       - 6379
     environment:
-      REDIS_PASSWORD: hirosoft
+      REDIS_PASSWORD: 
